@@ -433,9 +433,7 @@ OwnerFlow.prototype.getToken = function (username, password, opts) {
   return this.client._request(requestOptions({
     url: options.accessTokenUri,
     method: 'POST',
-    headers: Object.assign({}, DEFAULT_HEADERS, {
-      Authorization: auth(options.clientId, options.clientSecret)
-    }),
+    headers: Object.assign({}, DEFAULT_HEADERS, {}),
     body: body
   }, options))
     .then(function (data) {
